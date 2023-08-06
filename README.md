@@ -1,5 +1,7 @@
 # secondHometask
 
+In this branch I use Tailwind CSS
+
 ⦁	Your task is to create a notes app in JS as a web app. Users can add, edit and remove notes. 
 
 ⦁	List of notes is displayed in a form of table (HTML representation may vary: table, divs etc).
