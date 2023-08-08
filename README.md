@@ -17,3 +17,7 @@ For example, for a note “I’m gonna have a dentist appointment on the 3/5/202
 The table is updated whenever users perform some action on notes. The summary table is shown on the same page as the notes table.
 
 ⦁	There is no need to implement data storage. Simply create a JS variable which stores the data and prepopulate it with 7 notes so that they are shown when the page is reloaded.
+
+Bring the ready-made components made for the second React task to the Storybook library.
+
+launch: npm run storybook
