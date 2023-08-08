@@ -1,5 +1,3 @@
-// NotesTable.tsx
-
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Note, Column } from '../actions/interfacesTables';
@@ -32,27 +30,22 @@ const NotesTable: React.FC = () => {
         {
             id: '2',
             title: 'Name',
-            className: 'bg-gray-500 text-white',
         },
         {
             id: '3',
             title: 'Created',
-            className: 'bg-gray-500 text-white',
         },
         {
             id: '4',
             title: 'Category',
-            className: 'bg-gray-500 text-white',
         },
         {
             id: '5',
             title: 'Content',
-            className: 'bg-gray-500 text-white',
         },
         {
             id: '6',
             title: 'Dates',
-            className: 'bg-gray-500 text-white',
         },
         {
             id: '7',
@@ -63,7 +56,7 @@ const NotesTable: React.FC = () => {
                     </div>
                 </>
             ),
-            className: 'bg-gray-500 text-white center-icon',
+            className: 'toggle',
         },
         {
             id: '8',
@@ -74,7 +67,7 @@ const NotesTable: React.FC = () => {
                     </div>
                 </>
             ),
-            className: 'headlines_table center-icon',
+            className: 'toggle',
             colSpan: 2,
         },
     ];
@@ -84,7 +77,7 @@ const NotesTable: React.FC = () => {
             columns={columns}
             data={isArchive ? archive : active}
             renderRow={(el: Note) => <NoteRow key={el.id} note={el} isArchive={isArchive} />}
-            headClassName="bg-gray-500 text-white"
+            headClassName="list-head"
         />
     );
 };

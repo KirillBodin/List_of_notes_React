@@ -1,13 +1,14 @@
-// CategoryTable.tsx
+import { useSelector } from 'react-redux';
 
-import {useSelector} from 'react-redux';
 import CategoryRow from '../components/CategoryRow';
 import Table from '../components/Table';
 import {Category, Column} from '../actions/interfacesTables';
-import {selectCategoryStat} from '../reducers/notesReducer';
+import { selectCategoryStat } from '../reducers/notesReducer';
 
 const CategoryTable: React.FC = () => {
     const categories = useSelector(selectCategoryStat);
+
+
 
     const generateColumns = (): Column[] => {
         const columns: Column[] = [
@@ -19,19 +20,19 @@ const CategoryTable: React.FC = () => {
             {
                 id: '2',
                 title: 'Category',
-                className: 'category__head',
-            },
-            {
-                id: '3',
-                title: 'Active',
-                className: 'category__head',
-            },
-            {
-                id: '4',
-                title: 'Archived',
-                className: 'category__head',
             },
         ];
+
+        columns.push({
+            id: '3',
+            title: 'Active',
+        });
+
+        columns.push({
+            id: '4',
+            title: 'Archived',
+        });
+
 
         return columns;
     };
@@ -39,7 +40,7 @@ const CategoryTable: React.FC = () => {
     const columns = generateColumns();
 
     const renderCategoryRow = (category: Category) => (
-        <CategoryRow key={category.name} category={category}/>
+        <CategoryRow key={category.name} category={category} />
     );
 
     return (
@@ -47,7 +48,7 @@ const CategoryTable: React.FC = () => {
             columns={columns}
             data={categories}
             renderRow={renderCategoryRow}
-            headClassName='bg-gray-500 text-white'
+            headClassName='statistics-head'
         />
     );
 };

@@ -3,7 +3,7 @@ import Icon from './Icon';
 
 import { Category } from '../actions/interfacesTables';
 
-interface CategoryRowProps {
+export interface CategoryRowProps {
     category: Category;
 }
 

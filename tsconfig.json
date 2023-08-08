@@ -14,7 +14,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "skipLibCheck": true,
-    "noEmit": true
+    "noEmit": true,
+    "types": ["@storybook/react"]
   },
   "include": ["src"]
 }

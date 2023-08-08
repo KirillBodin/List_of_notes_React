@@ -11,15 +11,13 @@ const MainView: React.FC = () => {
     const handleCreateNote = () => {
         dispatch(openDialog({ mode: 'create', noteId: '' }));
     };
+
     return (
         <div className='App'>
-            <div className='container max-w-5xl mx-auto p-4'>
+            <div className='container'>
                 <NotesTable />
-                <div className='flex justify-center mt-4'>
-                    <button
-                        onClick={handleCreateNote}
-                        className='bg-gray-600 text-white px-4 py-2 rounded m-2'
-                    >
+                <div className='wrapper'>
+                    <button onClick={handleCreateNote} id='addNote'>
                         Create Note
                     </button>
                 </div>

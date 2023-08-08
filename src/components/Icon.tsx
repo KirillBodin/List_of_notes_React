@@ -20,7 +20,7 @@ const icons: { [key: string]: React.FC } = {
     Trash: () => <img className='w-8 h-8 aspect-w-1 aspect-h-1' src={Trash} alt='Trash' />,
 };
 
-interface IconProps {
+export interface IconProps {
     category: string;
     className?: string;
 }

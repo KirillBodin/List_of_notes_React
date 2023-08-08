@@ -10,7 +10,7 @@ const initialState: DialogState = {
   noteId: '',
 };
 
-const dialogSlice = createSlice({
+export const dialogSlice = createSlice({
   name: 'dialog',
   initialState,
   reducers: {
