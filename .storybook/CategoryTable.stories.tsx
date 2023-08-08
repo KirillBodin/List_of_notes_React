@@ -1,10 +1,11 @@
 // CategoryTable.stories.tsx
 
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from '../src/store/store'; // Make sure this import path is correct
-import CategoryTable from '../src/containers/CategoryTable'; // Replace with your component import
-import { Story, Meta } from '@storybook/react';
+import {Provider} from 'react-redux';
+import store from '../src/store/store';
+import CategoryTable from '../src/containers/CategoryTable';
+import { Story, Meta } from '@storybook/react/types-6-0';
+/*import {Story, Meta} from '@storybook/react';*/
 
 export default {
     title: 'Containers/CategoryTable',
@@ -12,7 +13,7 @@ export default {
     decorators: [
         (Story) => (
             <Provider store={store}>
-                <Story />
+                <Story/>
             </Provider>
         ),
     ],

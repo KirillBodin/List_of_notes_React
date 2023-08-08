@@ -1,16 +1,16 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import store from '../src/store/store'; // Make sure this import path is correct
-import NotesTable from '../src/containers/NotesTable'; // Replace with your component import
-import { Story, Meta } from '@storybook/react';
-
+import {Provider} from 'react-redux';
+import store from '../src/store/store';
+import NotesTable from '../src/containers/NotesTable';
+/*import {Story, Meta} from '@storybook/react';*/
+import { Story, Meta } from '@storybook/react/types-6-0';
 export default {
     title: 'Containers/NotesTable',
     component: NotesTable,
     decorators: [
         (Story) => (
             <Provider store={store}>
-                <Story />
+                <Story/>
             </Provider>
         ),
     ],

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import store from '../src/store/store';
-import NoteRow from '../src/components/NoteRow'; // Replace with your component import
-import { Story, Meta } from '@storybook/react';
+import NoteRow from '../src/components/NoteRow';
+import { Story, Meta } from '@storybook/react/types-6-0';
+/*import {Story, Meta} from '@storybook/react';*/
 
 export default {
     title: 'Components/NoteRow',
@@ -10,7 +11,7 @@ export default {
     decorators: [
         (Story) => (
             <Provider store={store}>
-                <Story />
+                <Story/>
             </Provider>
         ),
     ],
@@ -28,7 +29,7 @@ Default.args = {
         category: 'Task',
         content: 'This is an example note content.',
         dates: '2023-08-01',
-        archived:false
+        archived: false
     },
 };
 

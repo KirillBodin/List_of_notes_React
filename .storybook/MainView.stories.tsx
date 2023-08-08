@@ -1,10 +1,11 @@
 import React from 'react';
-import { Provider, useDispatch } from 'react-redux';
-import { createStore, combineReducers } from 'redux';
-import { Story, Meta } from '@storybook/react';
-import { dialogSlice } from '../src/reducers/dialogReducer';
-import { notesSlice } from '../src/reducers/notesReducer';
-import { openDialog } from '../src/reducers/dialogReducer';
+import {Provider, useDispatch} from 'react-redux';
+import {createStore, combineReducers} from 'redux';
+import { Story, Meta } from '@storybook/react/types-6-0';
+/*import {Story, Meta} from '@storybook/react';*/
+import {dialogSlice} from '../src/reducers/dialogReducer';
+import {notesSlice} from '../src/reducers/notesReducer';
+import {openDialog} from '../src/reducers/dialogReducer';
 import ModalWindow from '../src/components/ModalWindow';
 import MainView from '../src/containers/MainView';
 
@@ -21,7 +22,7 @@ export default {
     decorators: [
         (Story) => (
             <Provider store={store}>
-                <Story />
+                <Story/>
             </Provider>
         ),
     ],
@@ -31,7 +32,7 @@ const Template: Story = (args) => {
     const dispatch = useDispatch();
 
     const handleCreateNote = () => {
-        dispatch(openDialog({ mode: 'create', noteId: '' }));
+        dispatch(openDialog({mode: 'create', noteId: ''}));
     };
 
     return <MainView {...args} />;
@@ -43,8 +44,8 @@ Default.args = {};
 Default.decorators = [
     (Story) => (
         <div>
-            <Story />
-            <ModalWindow />
+            <Story/>
+            <ModalWindow/>
         </div>
     ),
 ];
